@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
@@ -7,29 +9,47 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between p-4">
         <Logo />
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 text-secondary ">
             <li>
               <a href="#" className="hover:text-gray-300">
-                Início
+                Benefícios
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-300">
-                Sobre
+                Funcionalidades
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-300">
-                Serviços
+                Planos
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-300">
-                Contato
+                Depoimentos
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-300">
+                Perguntas frequentes
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-300">
+                Aplicativo
+              </a>
+            </li>
+            <li>
+              <a href="#" className="font-bold text-primary">
+                Já sou cliente
               </a>
             </li>
           </ul>
         </nav>
+        <button className="bg-primary text-white py-4 px-10 rounded-full">
+          Criar conta grátis
+        </button>
       </div>
     </header>
   );
