@@ -47,9 +47,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <button className="bg-primary text-white py-4 px-10 rounded-full">
-          Criar conta grátis
-        </button>
+        <button className="btn">Criar conta grátis</button>
       </div>
     </header>
   );

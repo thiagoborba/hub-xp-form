@@ -1,3 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply bg-primary text-white py-4 px-10 rounded-full w-80;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary py-4 px-10 rounded-full border border-primary w-80;
+}
+
+header .btn {
+  @apply w-52;
+}
+
+.input {
+  @apply flex flex-col flex-grow;
+
+  > label {
+    @apply font-bold mb-2;
+  }
+
+  > input {
+    @apply border border-secondary-light rounded-2xl py-4 pl-6 hover:ring-primary hover:ring  focus:outline-none focus:ring focus:ring-primary;
+  }
+}
+
+.select {
+  @apply flex flex-col flex-grow;
+
+  > label {
+    @apply font-bold mb-2;
+  }
+
+  > select {
+    @apply border border-secondary-light rounded-2xl py-4 pl-6 hover:ring-primary hover:ring  focus:outline-none focus:ring focus:ring-primary;
+  }
+}
