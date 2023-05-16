@@ -3,25 +3,31 @@ import React, { SelectHTMLAttributes } from 'react';
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   errorMessage?: string;
   label?: string;
+  data: {
+    value: string;
+    label: string;
+  }[];
 }
 
-export const Select: React.FC<SelectProps> = ({
-  errorMessage,
-  name,
+const Select: React.FC<SelectProps> = ({
   label,
-  placeholder,
-  ...props
+  defaultValue,
+  name,
+  errorMessage,
+  data,
 }) => {
   return (
-    <div className="input">
-      {/* <label htmlFor={`select-${name}`}>{label}</label>
-      <input
-        className="input"
-        id={`input-${name}`}
-        placeholder={placeholder}
-        {...props}
-      />
-      {errorMessage && <span>Nome é obrigatório</span>} */}
+    <div className="field">
+      <label htmlFor={`select-${name}`}>{label}</label>
+      <select id={`select-${name}`} defaultValue={defaultValue}>
+        <option disabled value="">
+          Selecione uma opção
+        </option>
+        {data.map((item) => (
+          <option value={item.value}>{item.label}</option>
+        ))}
+      </select>
+      {errorMessage && <span>Cargo é obrigatório</span>}
     </div>
   );
 };

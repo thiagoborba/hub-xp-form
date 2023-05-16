@@ -13,14 +13,9 @@ export const Input: React.FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <div className="input">
+    <div className="field">
       <label htmlFor={`input-${name}`}>{label}</label>
-      <input
-        className="input"
-        id={`input-${name}`}
-        placeholder={placeholder}
-        {...props}
-      />
+      <input id={`input-${name}`} placeholder={placeholder} {...props} />
       {errorMessage && <span>Nome é obrigatório</span>}
     </div>
   );

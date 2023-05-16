@@ -1,7 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/Logo.svg';
+import { ReactComponent as Logo } from '../../Assets/Logo.svg';
 
 export function Header() {
   return (

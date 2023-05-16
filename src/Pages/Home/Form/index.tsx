@@ -1,6 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Input } from '../../../Components/Input';
+import Select from '../../../Components/Select';
+
+const ROLES = [
+  {
+    value: 'Frontend',
+    label: 'Frontend',
+  },
+  {
+    value: 'Backend',
+    label: 'Backend',
+  },
+  {
+    value: 'Fullstack',
+    label: 'Fullstack',
+  },
+];
 
 export function Form() {
   const {
@@ -25,20 +41,7 @@ export function Form() {
           type="text"
           {...register('name', { required: true })}
         />
-        <div className="flex flex-col">
-          <label htmlFor="role">Cargo</label>
-          <select
-            id="role"
-            defaultValue=""
-            {...register('role', { required: true, value: role })}
-          >
-            <option value="">Selecione uma opção</option>
-            <option value="Frontend">Frontend</option>
-            <option value="Backend">Backend</option>
-            <option value="Fullstack">Fullstack</option>
-          </select>
-          {errors.role && <span>Cargo é obrigatório</span>}
-        </div>
+        <Select data={ROLES} label="Cargo" />
       </div>
       <div>
         <p>Possui CNPJ ou MEI?</p>
